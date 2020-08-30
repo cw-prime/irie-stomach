@@ -2,6 +2,7 @@
   "name": "foobar",
   "version": "0.0.0",
   "private": true,
+  "main": "keystone.js",
   "engines": {
     "node": "14.8.0",
     "npm": "6.14.7"

@@ -3,8 +3,10 @@
 require('dotenv').config();
 // const mongoose = require('mongoose')
 // Require keystone
-var keystone = require('keystone');
-
+const express = require('express');
+const port = process.env.PORT || 3000;
+const keystone = require('keystone');
+const app = express();
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
@@ -39,7 +41,9 @@ keystone.init({
 
 // Load your project's Models
 keystone.import('models');
-
+app.listen(port, function () {
+	console.log(`Example app listening on port ${port}`);
+});
 // Setup common locals for your templates. The following are required for the
 // bundled templates and layouts. Any runtime locals (that should be set uniquely
 // for each request) should be added to ./routes/middleware.js
@@ -53,7 +57,9 @@ keystone.set('locals', {
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
 
-
+app.listen(port, function () {
+	console.log(`Example app listening on port ${port}` );
+});
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
