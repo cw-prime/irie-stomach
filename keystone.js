@@ -27,7 +27,7 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'ejs',
 	'cloudinary config': 'cloudinary://844958119169292:zdcfbyvqSbPVwjJmxEYdkBmCd9w@irie-stomach-blog',
-	'mongo': process.env.MONGO_URI || process.env.MONGOLAB_URI || 'mongodb://localhost/irie-stomach',
+	'mongo': process.env.MONGO_URI || 'mongodb://localhost/irie-stomach',
 	'emails': 'templates/emails',
 	'cookie secret': process.env.COOKIE_SECRET || 'irie',
 	'auto update': true,
