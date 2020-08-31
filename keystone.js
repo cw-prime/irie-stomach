@@ -57,7 +57,9 @@ keystone.set('locals', {
 app.listen(process.env.PORT || 3000);
 // Load your project's Routes
 
-
+app.get('/', function (request, response) {
+	response.send('Hello World!');
+});
 keystone.set('routes', require('./routes'));
 
 
