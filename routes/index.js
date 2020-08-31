@@ -31,11 +31,12 @@ var routes = {
 	views: importRoutes('./views'),
 };
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const app = express();
+// var router = express.Router();
 
-router.get('/', function (req, res, next) {
-	res.status(200).send('Hi, It works!');
+app.get('/', function (request, response) {
+	response.send('Hello World!');
 });
 // Setup Route Bindings
 exports = module.exports = function (app) {
