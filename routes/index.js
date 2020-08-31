@@ -25,23 +25,17 @@ var importRoutes = keystone.importer(__dirname);
 // Common Middleware
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
-const express = require('express');
-const http = require('http');
-const app = express();
-let PORT = process.env.PORT || 5000;
+
 // Import Route Controllers
-
-const server = http.Server(app);
-
-server.listen(PORT, function () {
-	console.log('Irie App Runing');
-});
 var routes = {
 	views: importRoutes('./views'),
 };
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
+	const PORT = process.env.PORT || 3050;
+
+	console.log(`Our app is running on port ${ PORT }`);
 	// Views
 	app.get('/', routes.views.index);
 	app.get('/blog/:category?', routes.views.blog);

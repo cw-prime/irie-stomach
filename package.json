@@ -1,8 +1,7 @@
 {
   "name": "foobar",
   "version": "0.0.0",
-  "private": true,
-  "main": "keystone.js",
+  "private": true,  
   "engines": {
     "node": "14.8.0",
     "npm": "6.14.7"
@@ -29,7 +28,7 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "start": "node keystone.js",
+    "start": "node keystone",
     "compile": "stylus -w public/styles/site.styl -o public/styles/site.css"
   }
 }
