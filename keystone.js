@@ -4,8 +4,6 @@ require('dotenv').config();
 // const mongoose = require('mongoose')
 // Require keystone
 
-const express = require('express');
-const app = express();
 
 const keystone = require('keystone');
 // require('./db/db');
@@ -53,7 +51,8 @@ keystone.set('locals', {
 	utils: keystone.utils,
 	editable: keystone.content.editable,
 });
-app.listen(process.env.PORT || 3000);
+
+keystone.listen(process.env.PORT = 3000);
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
 
