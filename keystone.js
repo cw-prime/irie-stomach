@@ -37,7 +37,7 @@ keystone.init({
 	'session': true,
 	'auth': true,
 	'user model': 'User',
-	'port': '3000',
+	'port': '3030',
 });
 
 // Load your project's Models
@@ -54,7 +54,6 @@ keystone.set('locals', {
 	editable: keystone.content.editable,
 });
 
-keystone.listen(process.env.PORT = 3000);
 app.listen(process.env.PORT || 3000);
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
