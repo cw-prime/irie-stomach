@@ -59,7 +59,9 @@ app.listen(process.env.PORT || 3000);
 
 
 keystone.set('routes', require('./routes'));
-
+app.get('/', function (request, response) {
+	response.send('Hello World!');
+});
 
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
