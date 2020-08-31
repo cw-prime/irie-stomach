@@ -59,13 +59,13 @@ app.listen(process.env.PORT || 3000);
 // Load your project's Routes
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./templates/views/index.ejs'),
+	views: importRoutes('./templates/views'),
 };
 
 
 keystone.set('routes', require('./routes'));
 app.get('/', function (request, response) {
-	response.send('/', routes.views.index);
+	response.sendFile('/', routes.views.index);
 });
 
 // Configure the navigation bar in Keystone's Admin UI
