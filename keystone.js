@@ -4,7 +4,7 @@ require('dotenv').config();
 // const mongoose = require('mongoose')
 // Require keystone
 const keystone = require('keystone');
-require('./db/db');
+// require('./db/db');
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
