@@ -64,10 +64,10 @@ app.listen(process.env.PORT || 3000);
 
 
 keystone.set('routes', require('./routes'));
-app.get('/', function (request, response) {
-	response.sendFile('/templates/views/pages/index.ejs');
-});
 
+app.get('/', function (req, res) {
+	res.render('index');
+});
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	posts: ['posts', 'post-categories'],
