@@ -59,7 +59,7 @@ app.listen(process.env.PORT || 3000);
 // Load your project's Routes
 // Import Route Controllers
 var routes = {
-	views: importRoutes('./templates/views'),
+	views: importRoutes('./templates/views/index'),
 };
 
 
