@@ -65,7 +65,7 @@ var routes = {
 
 keystone.set('routes', require('./routes'));
 app.get('/', function (request, response) {
-	response.sendFile('/', routes.views.index);
+	response.sendFile('/', routes.views.index.ejs);
 });
 
 // Configure the navigation bar in Keystone's Admin UI
