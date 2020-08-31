@@ -4,7 +4,7 @@ require('dotenv').config();
 // const mongoose = require('mongoose')
 // Require keystone
 const keystone = require('keystone');
-const importRoutes = keystone.importer(__dirname);
+// const importRoutes = keystone.importer(__dirname);
 const express = require('express');
 const app = express();
 
@@ -58,14 +58,14 @@ keystone.set('locals', {
 app.listen(process.env.PORT || 3000);
 // Load your project's Routes
 // Import Route Controllers
-var routes = {
-	views: importRoutes('./templates/views'),
-};
+// var routes = {
+	// views: importRoutes('./templates/views'),
+// };
 
 
 keystone.set('routes', require('./routes'));
 app.get('/', function (request, response) {
-	response.sendFile('/', routes.views.index.ejs);
+	response.sendFile('/templates/views/pages/index.ejs');
 });
 
 // Configure the navigation bar in Keystone's Admin UI
