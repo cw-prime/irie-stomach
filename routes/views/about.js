@@ -7,7 +7,7 @@ exports = module.exports = function (req, res) {
 
 	// locals.section is used to set the currently selected
 	// item in the header navigation.
-	locals.section = 'foo';
+	locals.section = 'about';
 
 	// Load the current post
 	view.on('init', function (next) {
@@ -15,5 +15,5 @@ exports = module.exports = function (req, res) {
 	});
 
 	// Render the view
-	view.render('pages/foo');
+	view.render('pages/about');
 };

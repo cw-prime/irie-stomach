@@ -33,16 +33,16 @@ var routes = {
 
 // Setup Route Bindings
 exports = module.exports = function (app) {
-	const PORT = process.env.PORT || 3050;
+	const PORT = process.env.PORT || 3040;
 
 	console.log(`Our app is running on port ${ PORT }`);
 	// Views
-	app.get('/', routes.views.index);
+	app.get('/', routes.views.blog);
 	app.get('/blog/:category?', routes.views.blog);
 	app.get('/blog/post/:post', routes.views.post);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
-	app.all('/foo', routes.views.foo);
+	app.all('/about', routes.views.about);
 
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

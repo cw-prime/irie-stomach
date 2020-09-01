@@ -262,7 +262,7 @@ ol {
 }
 
 .header-bottom {
-	padding: 38px 0;
+	padding: 10px 0;
 	position: relative;
 }
 
@@ -326,7 +326,7 @@ ol {
 }
 
 .hero-slide-item {
-	height: 694px;
+	height: 325px;
 	display: table;
 	width: 100%;
 	overflow: hidden;
@@ -919,7 +919,9 @@ ol {
 /*------------------
   About Pages
 ---------------------*/
-
+.about-pg {
+	margin-left: 130px;
+}
 .sf-warp {
 	width: 1229px;
 	margin: 72px auto 0;

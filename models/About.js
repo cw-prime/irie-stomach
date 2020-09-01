@@ -2,12 +2,12 @@ var keystone = require('keystone');
 var Types = keystone.Field.Types;
 
 /**
- * Foo Model
+ * About Model
  * ==========
  */
-var Foo = new keystone.List('foo');
+var About = new keystone.List('about');
 
-Foo.add({
+About.add({
 	name: { type: Types.Name, required: true, index: true },
 	email: { type: Types.Email, initial: true, required: true, unique: true, index: true },
 	password: { type: Types.Password, initial: true, required: true },
@@ -16,7 +16,7 @@ Foo.add({
 });
 
 // Provide access to Keystone
-Foo.schema.virtual('canAccessKeystone').get(function () {
+About.schema.virtual('canAccessKeystone').get(function () {
 	return this.isAdmin;
 });
 
@@ -24,11 +24,11 @@ Foo.schema.virtual('canAccessKeystone').get(function () {
 /**
  * Relationships
  */
-Foo.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
+About.relationship({ ref: 'Post', path: 'posts', refPath: 'author' });
 
 
 /**
  * Registration
  */
-Foo.defaultColumns = 'name, email, isAdmin';
-Foo.register();
+About.defaultColumns = 'name, email, isAdmin';
+About.register();
