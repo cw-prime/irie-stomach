@@ -21,7 +21,7 @@
 				</div>
 			</div>
 		</section>
-		<div class="container">
+		<div class="container">cd 
 			<h1><%= data.category ? data.category.name : 'Blog' %></h1>
 		</div>
 		<div class="container">
@@ -64,7 +64,7 @@
 											<a href="/blog/<%= category.key %>"><%= category.name %></a><% if ( i < post.categories.length -1 ) { %>, <% } %>
 										<% }) %>
 									<% } %>
-									<% if ( post.author.name.first ) { %>by <%= post.author.name.first %><% } %>
+									<% if ( post.author.name.first ) { %>by <%= post.author.name.first %>&nbsp;<%= post.author.name.last %><% } %>
 								</p>
 								<% if ( post.image.exists ) { %>
 									<img src="<%= post._.image.fit(160,160) %>" class="img pull-right">
